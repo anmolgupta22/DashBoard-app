@@ -1,0 +1,14 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Unselected tab -->
+    <item android:drawable="@android:color/transparent" android:state_selected="false"/>
+    <!-- Selected tab -->
+    <item>
+        <shape android:shape="rectangle">
+            <!-- Define curved corners -->
+            <corners android:radius="16dp"/>
+            <!-- Define background color for selected tab -->
+            <solid android:color="@color/tab_background_selected"/>
+            <!-- You can define other attributes like stroke for border etc. -->
+        </shape>
+    </item>
+</selector>
