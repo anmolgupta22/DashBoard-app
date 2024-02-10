@@ -11,14 +11,14 @@ import androidx.room.Update
 interface BaseDao<T> {
 
     @Insert(onConflict = REPLACE)
-    fun insertAll(starWarsResponse: List<T>)
+    fun insertAll(dashBoardResponseDb: List<T>)
 
     @Insert(onConflict = REPLACE)
     fun insert(dashBoardResponseDb: T): Long
 
     @Update(onConflict = REPLACE)
-    fun update(starWarsResponse: T): Int
+    fun update(dashBoardResponseDb: T): Int
 
     @Delete
-    fun delete(starWarsResponse: T): Int
+    fun delete(dashBoardResponseDb: T): Int
 }

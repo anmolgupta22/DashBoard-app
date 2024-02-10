@@ -11,7 +11,6 @@ interface DashBoardDao : BaseDao<DashBoardResponseDb> {
     @Query("Select * from tbl_dash_board")
     suspend fun fetchAllDashBoard(): DashBoardResponseDb?
 
-
     @Query("Delete from tbl_dash_board")
     suspend fun deleteAllDashBoard()
 }

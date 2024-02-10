@@ -8,7 +8,7 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 
-open class RoomDatabase @Inject constructor(
+open class RoomRepository @Inject constructor(
     private val dashBoardDao: DashBoardDao,
 ) {
 
@@ -17,14 +17,10 @@ open class RoomDatabase @Inject constructor(
     }
 
     suspend fun fetchAllDashBoard(): DashBoardResponseDb? {
-        return withContext(Dispatchers.IO) {
-            dashBoardDao.fetchAllDashBoard()
-        }
+        return dashBoardDao.fetchAllDashBoard()
     }
 
     suspend fun deleteAllDashBoard() {
-        return withContext(Dispatchers.IO) {
-            dashBoardDao.deleteAllDashBoard()
-        }
+        return dashBoardDao.deleteAllDashBoard()
     }
 }

@@ -1,21 +1,21 @@
 package com.example.creatorlinkanalytics.viewModel
 
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.creatorlinkanalytics.database.RoomDatabase
+import com.example.creatorlinkanalytics.database.RoomRepository
 import com.example.creatorlinkanalytics.di.DashBoardRepository
 import com.example.creatorlinkanalytics.model.DashBoardResponse
 import com.example.creatorlinkanalytics.model.DashBoardResponseDb
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 class DashBoardViewModel @Inject constructor(
     private val repository: DashBoardRepository,
-    private val roomDatabase: RoomDatabase,
+    private val roomRepository: RoomRepository,
 ) :
     ViewModel() {
 
@@ -27,27 +27,26 @@ class DashBoardViewModel @Inject constructor(
         val job = viewModelScope.async {
             repository.getDashBoard()
         }
-        viewModelScope.launch {
-            val finishJob = job.await()
-            _dashboard.value = finishJob
+        viewModelScope.launch(Dispatchers.IO) {
+            _dashboard.postValue(job.await())
         }
     }
 
     fun insertDashBoardData(dashBoardResponseDb: DashBoardResponseDb) {
-        roomDatabase.insertDashBoardData(dashBoardResponseDb)
+        roomRepository.insertDashBoardData(dashBoardResponseDb)
     }
 
 
     suspend fun fetchAllDashBoard(): DashBoardResponseDb? {
-        val job = viewModelScope.async {
-            roomDatabase.fetchAllDashBoard()
+        val job = viewModelScope.async(Dispatchers.IO) {
+            roomRepository.fetchAllDashBoard()
         }
         return job.await()
     }
 
     suspend fun deleteAllStarWars() {
-        val job = viewModelScope.async {
-            roomDatabase.deleteAllDashBoard()
+        val job = viewModelScope.async(Dispatchers.IO) {
+            roomRepository.deleteAllDashBoard()
         }
         job.await()
     }
