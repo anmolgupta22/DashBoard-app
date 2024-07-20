@@ -10,6 +10,10 @@
     <string name="view_all_links">View all Links</string>
     <string name="talk_with_us">Talk with us</string>
     <string name="frequently_asked_questions">Frequently Asked Questions</string>
+    <string name="good_morning">good morning</string>
+    <string name="good_afternoon">good afternoon\n</string>
+    <string name="good_evening">good evening</string>
+    <string name="good_night">good night</string>
 
 
     <string-array name="months_array">

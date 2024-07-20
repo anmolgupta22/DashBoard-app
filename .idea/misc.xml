@@ -19,9 +19,10 @@
         <entry key="..\:/Users/gupta/OneDrive/Desktop/CreatorLinkAnalytics/app/src/main/res/drawable/tab_color_selector.xml" value="0.1" />
         <entry key="..\:/Users/gupta/OneDrive/Desktop/CreatorLinkAnalytics/app/src/main/res/drawable/tab_color_unselected.xml" value="0.1125" />
         <entry key="..\:/Users/gupta/OneDrive/Desktop/CreatorLinkAnalytics/app/src/main/res/font/open_sans.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/gupta/OneDrive/Desktop/CreatorLinkAnalytics/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/gupta/OneDrive/Desktop/CreatorLinkAnalytics/app/src/main/res/layout/activity_splash_screen.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/gupta/OneDrive/Desktop/CreatorLinkAnalytics/app/src/main/res/layout/dashboard_info_item.xml" value="0.25" />
-        <entry key="..\:/Users/gupta/OneDrive/Desktop/CreatorLinkAnalytics/app/src/main/res/layout/fragment_dash_board.xml" value="0.18" />
+        <entry key="..\:/Users/gupta/OneDrive/Desktop/CreatorLinkAnalytics/app/src/main/res/layout/fragment_dash_board.xml" value="0.26046176046176045" />
         <entry key="..\:/Users/gupta/OneDrive/Desktop/CreatorLinkAnalytics/app/src/main/res/layout/fragment_recent.xml" value="0.17395833333333333" />
         <entry key="..\:/Users/gupta/OneDrive/Desktop/CreatorLinkAnalytics/app/src/main/res/layout/fragment_recent_links.xml" value="0.18802083333333333" />
         <entry key="..\:/Users/gupta/OneDrive/Desktop/CreatorLinkAnalytics/app/src/main/res/layout/fragment_top_links.xml" value="0.18802083333333333" />
@@ -29,7 +30,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

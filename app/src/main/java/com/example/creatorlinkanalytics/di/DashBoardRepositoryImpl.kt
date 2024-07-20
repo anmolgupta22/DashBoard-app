@@ -9,7 +9,7 @@ class DashBoardRepositoryImpl @Inject constructor(private val apiService: ApiSer
 
         return try {
             val response = apiService.getDashBoard()
-            if (response.isSuccessful && response.body() != null) {
+            if (response.isSuccessful && response.body()?.status == true) {
                 Result.success(response.body())
             } else {
                 // Handle other API response errors
